@@ -8,7 +8,7 @@ export function HourDisplay() {
     return (
         <div className="hourDisplayClass">
             <Hour/>
-            <SunSymbol/>
+            <SunSymbol weathertype='clear-day'/>
             <Temperature/>
         </div>
     )

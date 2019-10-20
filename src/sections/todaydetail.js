@@ -7,6 +7,13 @@ export function TodayDetail() {
         <HourDisplay/>
         <HourDisplay/>
         <HourDisplay/>
-      </div>
+        <HourDisplay/>
+        <HourDisplay/>
+        <HourDisplay/>
+        <HourDisplay/>
+        <HourDisplay/>
+        <HourDisplay/>
+
+        </div>
     )
   }
