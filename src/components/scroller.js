@@ -8,15 +8,16 @@ export function Scroller(props) {
   return (
       <div className="scrollerClass">
         {planetList.map(function(planetlistindex) {
-          const currentplanetbooleancheck = currentPlanet.name === planetlistindex.name;//
+          const currentplanetbooleancheck = currentPlanet.name === planetlistindex.name;
           if (currentplanetbooleancheck) {
             return(
-              <div className = "highlightedDotClass">
+              <div className = "highlightedDotClass" onMouseOver={function(){props.setCurrentPlanet(planetlistindex)}}>
+
               </div>
             )
-            }
+          }
           return(
-            <div className = "dotClass">
+            <div className = "dotClass" onMouseOver={function(){props.setCurrentPlanet(planetlistindex)}}>
             </div>
           )
         })}

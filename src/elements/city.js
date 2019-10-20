@@ -1,9 +1,10 @@
 import React from 'react';
 
-export function City() {
+export function City(props) {
+    const planetname = props.planet;
     return (
       <h1 className="cityClass">
-        P Town
+        {planetname}
       </h1>
     )
   }

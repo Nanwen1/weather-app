@@ -11,7 +11,11 @@ export function TodaySummary(props) {
   }
     return (
       <div className="todaySummaryClass" style={styles}>
-          <City/>
+          <City planet={props.currentPlanet.name}/>
+          {props.currentPlanet.name =="Pluto"
+           && <p>
+          "#stillAPlanet"
+      </p>}
           <Link/>
           <Temperature Temperature limit="current"/>
       </div>

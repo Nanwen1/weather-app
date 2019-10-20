@@ -21,6 +21,7 @@
   background-color: rgb(39, 37, 37);
   display: flex;
   justify-content: space-between;
+  padding: 5px;
 }
 .upcomingWeekClass{
 
@@ -46,8 +47,9 @@
 .scrollerClass{
   background-color: white;
   height: 30px;
-  width: 130px;
+  width: 150px;
   margin: 0 auto;
+  margin-top: -15px;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -56,18 +58,19 @@
 
 .scrollerClass .highlightedDotClass{
   background-color: black;
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
   margin: 2px;
 }
 
 .scrollerClass .dotClass{
   background-color: grey;
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
   margin: 2px;
+  cursor: pointer;
 }
 
 .todaySummaryClass{
@@ -84,6 +87,7 @@
 }
 .weekdayDisplayClass{
   text-align: left;
+  margin-bottom: 5px;
 }
 .weekdayRowTempClass{
   display: flex;
@@ -93,19 +97,25 @@
 /* ELEMENTS */
 .cityClass{
   margin-top: 60px;
+  font-size: 60px;
 }
 
 .linkClass{
   font-size: 10px;
+  margin: 20px;
+  color: white;
 }
 .miniTitleClass{
   font-size: 10px;
-  margin: 2px;
+  margin: 4px;
   margin-left: 10px;
+  margin-top:10px;
+  margin-bottom: 0px;
+  text-align: left;
 }
 .sunSymbolClass{
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   background-size: cover;
   background-repeat: none;
 }
@@ -116,7 +126,9 @@
 .temperatureClass{
   font-size: 30px;
   font-weight: bold;
-  margin: 10px;
+  margin: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .temperatureClass.min{
@@ -130,6 +142,7 @@
 
 .weekdayClass{
   font-size: 30px;
-  margin: 10px;
+  margin: 0px;
+  margin-left : 10px;
   font-weight: bold;
 }

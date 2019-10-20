@@ -7,11 +7,12 @@ import { UpcomingWeek } from './sections/upcomingweek';
 import { Complain } from './sections/complain';
 
 function App() {
-  const currentPlanet = planetdata[0];
+  const [currentPlanet, setCurrentPlanet] = React.useState(planetdata[0]); 
+  
 
   return (
     <div className="App">
-        <TodayBanner currentPlanet={currentPlanet} planetList={planetdata}/>
+        <TodayBanner currentPlanet={currentPlanet} planetList={planetdata} setCurrentPlanet={setCurrentPlanet}/>
         <TodayDetail currentPlanet={currentPlanet}/>
         <UpcomingWeek currentPlanet={currentPlanet}/>
         <Complain/>
