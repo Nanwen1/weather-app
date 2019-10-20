@@ -14,8 +14,12 @@
 .todayBannerClass{
 
 }
-.todayDetailClass{
+.todayBannerClass .temperatureClass{
 
+}
+.todayDetailClass{
+  background-color: grey;
+  display: flex;
 }
 .upcomingWeekClass{
 
@@ -26,6 +30,18 @@
 .hourDisplayClass{
 
 }
+.hourDisplayClass .temperatureClass{
+  font-size: 10px;
+  margin: 0;
+}
+.hourDisplayClass .sunSymbolClass{
+  font-size: 10px;
+  margin: 0;
+}
+.hourDisplayClass .hourClass{
+  font-size: 10px;
+  margin: 0;
+}
 .scrollerClass{
 
 }
@@ -35,31 +51,57 @@
   height: 300px;
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
+}
+.dayRowClass{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .weekdayDisplayClass{
-
+  text-align: left;
 }
-
+.weekdayRowTempClass{
+  display: flex;
+  align-items: center;
+}
 
 /* ELEMENTS */
 .cityClass{
-
+  margin-top: 60px;
 }
 .hourClass{
 
 }
 .linkClass{
-
+  font-size: 10px;
 }
-.tminiTitleClass{
-
+.miniTitleClass{
+  font-size: 10px;
+  margin: 2px;
+  margin-left: 10px;
 }
 .sunSymbolClass{
 
 }
+
 .temperatureClass{
-
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px;
 }
-.weekdayClass{
 
+.temperatureClass.min{
+  font-weight: 400;
+}
+
+.temperatureClass.current{
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.weekdayClass{
+  font-size: 30px;
+  margin: 10px;
+  font-weight: bold;
 }

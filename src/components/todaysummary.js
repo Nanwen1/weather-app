@@ -9,7 +9,7 @@ export function TodaySummary() {
       <div className="todaySummaryClass">
           <City/>
           <Link/>
-          <Temperature/>
+          <Temperature Temperature limit="current"/>
       </div>
     )
   }

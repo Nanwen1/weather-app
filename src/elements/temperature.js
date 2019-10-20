@@ -1,8 +1,8 @@
 import React from 'react';
-export function Temperature() {
+export function Temperature(props) {
     return (
-      <p className="temperatureClass">
-        100deg
+      <p className={`temperatureClass ${props.limit}`}>
+        10&deg;
       </p>
     )
   }

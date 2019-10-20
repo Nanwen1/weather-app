@@ -2,8 +2,8 @@ import React from 'react';
 
 export function City() {
     return (
-      <title className="cityClass">
+      <h1 className="cityClass">
         P Town
-      </title>
+      </h1>
     )
   }

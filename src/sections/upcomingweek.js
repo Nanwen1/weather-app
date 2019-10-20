@@ -1,11 +1,11 @@
 import React from 'react';
-import { Weekday } from '../elements/weekday';
+import { WeekdayDisplay } from '../components/weekdaydisplay';
 
 export function UpcomingWeek() {
     return (
       <div className='upcomingWeekClass'>
         This is the weekday section
-        <Weekday/>
+        <WeekdayDisplay/>
       </div>
     )
   }

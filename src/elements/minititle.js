@@ -1,7 +1,7 @@
 import React from 'react';
 export function MiniTitle() {
     return (
-      <p className="tinyTitleClass">
+      <p className="miniTitleClass">
         I'm a tiny title
       </p>
     )

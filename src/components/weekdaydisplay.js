@@ -8,10 +8,14 @@ export function WeekdayDisplay() {
     return (
       <div className="weekdayDisplayClass">
         <MiniTitle/>
+        <div className="dayRowClass">
         <Weekday/>
-        <SunSymbol/>
-        <Temperature/>
-        <Temperature/>
+            <div className="weekdayRowTempClass" >
+              <SunSymbol/>
+              <Temperature limit="max"/> 
+              <Temperature limit="min"/>
+            </div>
+          </div>
       </div>
     )
   }
