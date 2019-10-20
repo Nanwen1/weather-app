@@ -6,7 +6,7 @@ import { Temperature } from '../elements/temperature';
 
 export function TodaySummary() {
     return (
-      <div>
+      <div className="todaySummaryClass">
           <City/>
           <Link/>
           <Temperature/>

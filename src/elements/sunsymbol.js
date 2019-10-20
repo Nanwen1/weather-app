@@ -1,8 +1,8 @@
 import React from 'react';
 export function SunSymbol() {
     return (
-      <p>
-        <strong>opps</strong>
+      <p className="sunSymbol">
+        sunsymbol
       </p>
     )
   }

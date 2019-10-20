@@ -5,7 +5,7 @@ import { WeekdayDisplay } from '../components/weekdaydisplay';
 
 export function TodayBanner() {
     return (
-      <div>
+      <div className='todayBannerClass'>
         <TodaySummary/>
         <Scroller/>
         <WeekdayDisplay/>

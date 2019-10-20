@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import { TodayBanner } from './sections/todaybanner';
 import './App.css';
-
+import { TodayDetail } from './sections/todaydetail';
+import { UpcomingWeek } from './sections/upcomingweek';
+import { Complain } from './sections/complain';
+/* <img src={logo} className="App-logo" alt="logo" /> */
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <TodayBanner/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <TodayDetail/>
+        <UpcomingWeek/>
+        <Complain/>
     </div>
   );
 }

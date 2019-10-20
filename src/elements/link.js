@@ -1,8 +1,8 @@
 import React from 'react';
 export function Link() {
     return (
-      <p>
-        <strong>I'm a mini link</strong>
-      </p>
+      <a href="" className="linkClass">
+        I'm a mini link
+      </a>
     )
   }

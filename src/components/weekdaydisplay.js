@@ -6,7 +6,7 @@ import { SunSymbol } from '../elements/sunsymbol';
 
 export function WeekdayDisplay() {
     return (
-      <div>
+      <div className="weekdayDisplayClass">
         <MiniTitle/>
         <Weekday/>
         <SunSymbol/>
