@@ -1,8 +1,9 @@
 import React from 'react';
-export function Weekday() {
+
+export function Weekday(props) {
     return (
       <p className='weekdayClass'>
-        Friday
+        {props.name}
       </p>
     )
   }

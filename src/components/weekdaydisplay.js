@@ -4,12 +4,12 @@ import { MiniTitle } from '../elements/minititle';
 import { Temperature } from '../elements/temperature';
 import { SunSymbol } from '../elements/sunsymbol';
 
-export function WeekdayDisplay() {
+export function WeekdayDisplay(props) {
     return (
       <div className="weekdayDisplayClass">
         <MiniTitle/>
         <div className="dayRowClass">
-        <Weekday/>
+        <Weekday name="Friday"/>
             <div className="weekdayRowTempClass" >
               <SunSymbol/>
               <Temperature limit="max"/> 

@@ -20,6 +20,7 @@
 .todayDetailClass{
   background-color: rgb(39, 37, 37);
   display: flex;
+  justify-content: space-between;
 }
 .upcomingWeekClass{
 
@@ -43,11 +44,34 @@
   margin: 0;
 }
 .scrollerClass{
-
+  background-color: white;
+  height: 30px;
+  width: 130px;
+  margin: 0 auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.scrollerClass .highlightedDotClass{
+  background-color: black;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  margin: 2px;
+}
+
+.scrollerClass .dotClass{
+  background-color: grey;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  margin: 2px;
+}
+
 .todaySummaryClass{
   font-family: 'Orbitron', sans-serif;
-  background-image: url(/planets/uranus.jpg);
   height: 300px;
   background-position: center center;
   background-size: cover;
@@ -70,9 +94,7 @@
 .cityClass{
   margin-top: 60px;
 }
-.hourClass{
 
-}
 .linkClass{
   font-size: 10px;
 }
