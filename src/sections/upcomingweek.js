@@ -4,15 +4,36 @@ import { MiniTitle } from '../elements/minititle';
 
 
 export function UpcomingWeek(props) {
+  var rows = []; 
+  var day = "Wednesday";
+  for (let index = 0; index < 6; index++) {
+    if (day == "Monday"){
+      day = "Tuesday";
+    }
+    else if (day == "Tuesday"){
+      day = "Wednesday";
+    }
+    else if (day == "Wednesday"){
+      day = "Thursday";
+    }
+    else if (day == "Thursday"){
+      day = "Friday";
+    }
+    else if (day == "Friday"){
+      day = "Saturday";
+    }
+    else if (day == "Saturday"){
+      day = "Sunday";
+    }
+    else {
+      day = "Monday";
+    }
+    rows.push(<WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day={day}/>)
+  }  
     return (
       <div className='upcomingWeekClass'>
         <MiniTitle location="Upcoming:"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Friday"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Saturday"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Sunday"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Monday"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Tuesday"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Wednesday"/>
+        {rows}
       </div>
     )
   }
