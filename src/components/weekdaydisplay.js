@@ -17,6 +17,3 @@ export function WeekdayDisplay(props) {
       </div>
     )
   }
-
-
-  weatherdata={planethighsandlows}
