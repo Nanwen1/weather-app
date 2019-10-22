@@ -8,9 +8,9 @@ export function TodayBanner(props) {
     return (
 
       <div className='todayBannerClass'>
-        <TodaySummary currentPlanet={props.currentPlanet}/>
+        <TodaySummary currentPlanet={props.currentPlanet} planetList={props.planetList}/>
         <Scroller currentPlanet={props.currentPlanet} planetList={props.planetList} setCurrentPlanet={props.setCurrentPlanet}/>
-        <MiniTitle/>
+        <MiniTitle location="Today:"/>
         <WeekdayDisplay currentPlanet={props.currentPlanet} day="Thursday"/>
       </div>
     )

@@ -6,13 +6,13 @@ import { MiniTitle } from '../elements/minititle';
 export function UpcomingWeek(props) {
     return (
       <div className='upcomingWeekClass'>
-        <MiniTitle/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} day="Friday"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} day="Saturday"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} day="Sunday"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} day="Monday"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} day="Tuesday"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} day="Wednesday"/>
+        <MiniTitle location="Upcoming:"/>
+        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Friday"/>
+        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Saturday"/>
+        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Sunday"/>
+        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Monday"/>
+        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Tuesday"/>
+        <WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day="Wednesday"/>
       </div>
     )
   }

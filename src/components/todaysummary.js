@@ -16,8 +16,8 @@ export function TodaySummary(props) {
            && <p>
           "#stillAPlanet"
       </p>}
-          <Link/>
-          <Temperature Temperature limit="current"/>
+          <Link location="Change"/>
+          <Temperature currentplanet={props.currentPlanet} planetList={props.planetList}/>
       </div>
     )
   }

@@ -5,19 +5,44 @@ import './App.css';
 import { TodayDetail } from './sections/todaydetail';
 import { UpcomingWeek } from './sections/upcomingweek';
 import { Complain } from './sections/complain';
+import { Complaining } from './sections/formcomplain';
+
+const upComingWeekPage = 'UpcomingWeek'
+const complainPage = 'Complain'
 
 function App() {
-  const [currentPlanet, setCurrentPlanet] = React.useState(planetdata[0]); 
-  
+  //below is about "state"
+  const [currentPlanet, setCurrentPlanet] = React.useState(planetdata[0]); //default to zero
+  const [currentPage, setCurrentPage] = React.useState(upComingWeekPage);
+  //setCurrentPlanet is a function that we call to change the planet
+  //currentPlanet is the variable
 
   return (
     <div className="App">
+    
+    {currentPage === upComingWeekPage &&
+      <div>
         <TodayBanner currentPlanet={currentPlanet} planetList={planetdata} setCurrentPlanet={setCurrentPlanet}/>
-        <TodayDetail currentPlanet={currentPlanet}/>
-        <UpcomingWeek currentPlanet={currentPlanet}/>
+        <TodayDetail currentPlanet={currentPlanet} planetList={planetdata}/>
+        <UpcomingWeek currentPlanet={currentPlanet} planetList={planetdata} currentPage={currentPage} setCurrentPage={setCurrentPage} />
         <Complain/>
+      </div>}
+
+    {currentPage === complainPage &&
+      <div>
+        <TodayBanner currentPlanet={currentPlanet} planetList={planetdata} setCurrentPlanet={setCurrentPlanet}/>
+        <TodayDetail currentPlanet={currentPlanet} planetList={planetdata}/>
+        <Complaining/>
+        <Complain/>
+      </div>}
+
+
     </div>
   );
 }
+
+
+
+
 
 export default App;

@@ -10,8 +10,8 @@ export function WeekdayDisplay(props) {
         <Weekday name={props.day}/>
             <div className="weekdayRowTempClass" >
               <SunSymbol/>
-              <Temperature limit="max"/> 
-              <Temperature limit="min"/>
+              <Temperature currentplanet={props.currentPlanet} planetList={props.planetList} limit="max"/> 
+              <Temperature currentplanet={props.currentPlanet} planetList={props.planetList} limit="min"/>
             </div>
           </div>
       </div>

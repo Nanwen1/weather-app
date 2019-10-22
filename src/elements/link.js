@@ -1,8 +1,9 @@
 import React from 'react';
-export function Link() {
+export function Link(props) {
+  const location = props.location
     return (
       <a href="" className="linkClass">
-        I'm a mini link
+        {location}
       </a>
     )
   }

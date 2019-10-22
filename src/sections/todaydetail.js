@@ -4,18 +4,18 @@ import { HourDisplay } from '../components/hourdisplay';
 export function TodayDetail(props) {
     return (
       <div className='todayDetailClass'>
-        <HourDisplay/>
-        <HourDisplay/>
-        <HourDisplay/>
-        <HourDisplay/>
-        <HourDisplay/>
-        <HourDisplay/>
-        <HourDisplay/>
-        <HourDisplay/>
-        <HourDisplay/>
-        <HourDisplay/>
-        <HourDisplay/>
-        <HourDisplay/>
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>        
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>        
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>
+        <HourDisplay currentPlanet={props.currentPlanet} planetList={props.planetList}/>
 
         </div>
     )

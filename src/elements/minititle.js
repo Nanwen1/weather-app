@@ -1,8 +1,9 @@
 import React from 'react';
-export function MiniTitle() {
+export function MiniTitle(props) {
+  const location = props.location;
     return (
       <p className="miniTitleClass">
-        I'm a tiny title
+          {location}
       </p>
     )
   }

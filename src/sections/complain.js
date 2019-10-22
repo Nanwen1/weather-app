@@ -5,8 +5,8 @@ import { Link } from '../elements/link';
 export function Complain() {
     return (
       <div className='complainClass'>
-        <MiniTitle/>
-        <Link/>
+        <MiniTitle location="Don't like the weather?"/>
+        <Link location="Complain to God"/>
       </div>
     )
   }
