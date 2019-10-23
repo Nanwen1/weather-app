@@ -5,7 +5,7 @@ import { Link } from '../elements/link';
 export function Godprofile(props) {
     return (
         <div className="hourDisplayClass">
-          <Link location="I regret this take me back"/>
+          <Link location="I regret this take me back" currentPage={currentPage}/>
             picture
             decription
         </div>

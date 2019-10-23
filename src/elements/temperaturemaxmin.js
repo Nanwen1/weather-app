@@ -19,6 +19,7 @@ import React from 'react';
             
             allplanetweatherindex.weather.map(function(weatherForPlanetIndex) {
               const isWeatherOnCurrentDay = weatherForPlanetIndex.day === day;
+
               if (isWeatherOnCurrentDay) { 
                   if (max<weatherForPlanetIndex.temp) {
                     max = weatherForPlanetIndex.temp

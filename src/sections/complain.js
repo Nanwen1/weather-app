@@ -6,7 +6,7 @@ export function Complain() {
     return (
       <div className='complainClass'>
         <MiniTitle location="Don't like the weather?"/>
-        <Link location="Complain to God"/>
+        <Link location="Complain to God" currentPage={currentPage}/>
       </div>
     )
   }

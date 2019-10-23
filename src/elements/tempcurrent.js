@@ -1,11 +1,14 @@
 import React from 'react';
 
-  export function Temperature(props) {
+  export function TemperatureCurrent(props) {
     const currentplanet = props.currentplanet.name;
     const allplanetweather = props.allplanetweather;
     var d = new Date();
-    const hour = props.hour;
+    var hour = d.getHours();
 
+    if( hour%2 != 0 ) {
+        hour=hour-1;
+    }
 
     if (d.getDay() == 1){
       var day  = "Monday";

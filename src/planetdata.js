@@ -46,7 +46,7 @@ function generatetempdata(dictionary){
     return outputweatherdata;
 }
 
-console.log(allplanetweather);
+
 
 export const planetdata = [
     {name: 'Mercury', image: mercury, currenttemp: 425},

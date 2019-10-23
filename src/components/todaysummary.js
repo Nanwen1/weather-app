@@ -1,15 +1,12 @@
 import React from 'react';
 import { City } from '../elements/city';
 import { Link } from '../elements/link';
-import { Temperature } from '../elements/temperature';
+import { TemperatureCurrent } from '../elements/tempcurrent';
 
 export function TodaySummary(props) {
-  
   var d = new Date();
-  var n = d.getHours();
-  if (n % 2 != 0) {
-    n = n-1;
-  }
+  const currenthour = d.getHours();
+
   const styles = {
     [`background-image`]: `url(${props.currentPlanet.image})`
   }
@@ -20,8 +17,8 @@ export function TodaySummary(props) {
            && <p>
           "#stillAPlanet"
       </p>}
-          <Link location="Change"/>
-          <Temperature currentplanet={props.currentPlanet} planetList={props.planetList} allplanetweather={props.allplanetweather} hour={n}/>
+          <Link location="Change" currentPage={props.currentPage}/>
+          <TemperatureCurrent currentplanet={props.currentPlanet} planetList={props.planetList} allplanetweather={props.allplanetweather} currenthour={currenthour}/>
       </div>
     )
   }
