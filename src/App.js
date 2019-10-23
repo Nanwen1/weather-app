@@ -1,5 +1,6 @@
 import React from 'react';
 import { planetdata } from './planetdata';
+import { allplanetweather } from './planetdata';
 import { TodayBanner } from './sections/todaybanner';
 import './App.css';
 import { TodayDetail } from './sections/todaydetail';
@@ -22,16 +23,16 @@ function App() {
     
     {currentPage === upComingWeekPage &&
       <div>
-        <TodayBanner currentPlanet={currentPlanet} planetList={planetdata} setCurrentPlanet={setCurrentPlanet}/>
-        <TodayDetail currentPlanet={currentPlanet} planetList={planetdata}/>
-        <UpcomingWeek currentPlanet={currentPlanet} planetList={planetdata} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <TodayBanner currentPlanet={currentPlanet} planetList={planetdata} setCurrentPlanet={setCurrentPlanet} allplanetweather={allplanetweather}/>
+        <TodayDetail currentPlanet={currentPlanet} planetList={planetdata} allplanetweather={allplanetweather}/>
+        <UpcomingWeek currentPlanet={currentPlanet} planetList={planetdata} currentPage={currentPage} setCurrentPage={setCurrentPage} allplanetweather={allplanetweather}/>
         <Complain/>
       </div>}
 
     {currentPage === complainPage &&
       <div>
-        <TodayBanner currentPlanet={currentPlanet} planetList={planetdata} setCurrentPlanet={setCurrentPlanet}/>
-        <TodayDetail currentPlanet={currentPlanet} planetList={planetdata}/>
+        <TodayBanner currentPlanet={currentPlanet} planetList={planetdata} setCurrentPlanet={setCurrentPlanet} allplanetweather={allplanetweather}/>
+        <TodayDetail currentPlanet={currentPlanet} planetList={planetdata} allplanetweather={allplanetweather}/>
         <Complaining/>
         <Complain/>
       </div>}

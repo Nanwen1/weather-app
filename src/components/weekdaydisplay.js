@@ -1,6 +1,6 @@
 import React from 'react';
 import { Weekday } from '../elements/weekday';
-import { TemperatureMaxMin } from '../elements/temperature';
+import { TemperatureMaxMin } from '../elements/temperaturemaxmin';
 import { SunSymbol } from '../elements/sunsymbol';
 
 export function WeekdayDisplay(props) {

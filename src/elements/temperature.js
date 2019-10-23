@@ -7,20 +7,26 @@ import React from 'react';
     const hour = props.hour;
     return (
       <div>
-        {allplanetweather.map(function() {
-          const currentplanetbooleancheck = allplanetweather.name === currentplanet && allplanetweather.time === hour;
+        {allplanetweather.map(function(allplanetweatherIndex) {
+          const currentplanetbooleancheck = allplanetweather.name === currentplanet
           if (currentplanetbooleancheck) {
-            return(
-              <p className={`temperatureClass`}>
-                {allplanetweather.temp}
-              </p>
-            )
+
+            return allplanetweather.weather.map(function(weatherIndex) {
+              const currentplanetbooleancheck2 = weatherIndex.time === hour
+                if (currentplanetbooleancheck2) {
+                  return(
+                    <p className={`temperatureClass`}>
+                      {allplanetweather.weather.temp}
+                    </p>
+                  )
+                }
+                return (
+                  <p className={`temperatureClass`}>
+                    {currenttemp}
+                  </p>
+                )
+            })
           }
-            return(
-            <p className={`temperatureClass`}>
-              {currenttemp}
-            </p>
-            )
         })}
       </div>
     )

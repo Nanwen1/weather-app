@@ -17,7 +17,7 @@ function getseedforhour(high, low, hour, day){
 
 const planethighsandlows = [
     {name: 'Mercury', high: 449, low:-180},
-    {name: 'Venus', high: 465, low: 465},
+    {name: 'Venus', high: 465, low: 400},
     {name: 'Earth', high: 58, low:-50,},
     {name: 'Mars', high: 195, low: -173},
     {name: 'Jupiter', high: -13, low: -145,},
@@ -27,7 +27,7 @@ const planethighsandlows = [
     {name: 'Pluto', high:-369, low:-387},
 ]
 
-const allplanetweather = planethighsandlows.map(function(planetlistindex) {
+export const allplanetweather = planethighsandlows.map(function(planetlistindex) {
     planetlistindex.weather = generatetempdata(planetlistindex)
     return planetlistindex
 })
