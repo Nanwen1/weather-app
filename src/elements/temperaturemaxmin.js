@@ -19,13 +19,15 @@ import React from 'react';
             
             allplanetweatherindex.weather.map(function(weatherForPlanetIndex) {
               const isWeatherOnCurrentDay = weatherForPlanetIndex.day === day;
-              if (isWeatherOnCurrentDay && props.limit==="max") { 
+              if (isWeatherOnCurrentDay) { 
                   if (max<weatherForPlanetIndex.temp) {
                     max = weatherForPlanetIndex.temp
                   }
+                  if (min>weatherForPlanetIndex.temp) {
+                    min = weatherForPlanetIndex.temp
+                  }
               }
             })
-
             if (props.limit==="max") {
               return (
                 <p className={`temperatureClass ${props.limit}`}>
@@ -33,8 +35,14 @@ import React from 'react';
                 </p>
               )
             }
-          }
-
+            if (props.limit==="min") {
+              return (
+                <p className={`temperatureClass ${props.limit}`}>
+                  {min}
+                </p>
+                )
+              }
+            }
           return (<></>)
         })}
       </div>

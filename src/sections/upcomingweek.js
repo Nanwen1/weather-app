@@ -7,25 +7,25 @@ export function UpcomingWeek(props) {
   var rows = []; 
   var d = new Date();
   
-  if (d.getDay() == 0){
+  if (d.getDay() == 1){
     var day  = "Monday";
   }
-  else if (d.getDay() == 1){
+  else if (d.getDay() == 2){
     var day  = "Tuesday";
   }
-  else if (d.getDay() == 2){
+  else if (d.getDay() == 3){
     var day  = "Wednesday";
   }
-  else if (d.getDay() == 3){
+  else if (d.getDay() == 4){
     var day  = "Thursday";
   }
-  else if (d.getDay() == 4){
+  else if (d.getDay() == 5){
     var day  = "Friday";
   }
-  else if (d.getDay() == 5){
+  else if (d.getDay() == 6){
     var day  = "Saturday";
   }
-  else if (d.getDay() == 6){
+  else if (d.getDay() == 0){
     var day  = "Sunday";
   }
   
