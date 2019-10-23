@@ -1,3 +1,19 @@
+props
+
+declaration 
+<Hello coffeeType="latte" />
+
+Looks like:
+  const props = {
+    coffeeType: 'latte'
+  }
+
+Is called:
+function Hello(props) {
+  props.coffeeType === 'latte'
+
+
+
 [
     {
         "name": "Mercury",

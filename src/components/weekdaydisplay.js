@@ -1,6 +1,6 @@
 import React from 'react';
 import { Weekday } from '../elements/weekday';
-import { Temperature } from '../elements/temperature';
+import { TemperatureMaxMin } from '../elements/temperature';
 import { SunSymbol } from '../elements/sunsymbol';
 
 export function WeekdayDisplay(props) {
@@ -10,8 +10,8 @@ export function WeekdayDisplay(props) {
         <Weekday name={props.day}/>
             <div className="weekdayRowTempClass" >
               <SunSymbol/>
-              <Temperature currentplanet={props.currentPlanet} planetList={props.planetList} limit="max"/> 
-              <Temperature currentplanet={props.currentPlanet} planetList={props.planetList} limit="min"/>
+              <TemperatureMaxMin currentplanet={props.currentPlanet} planetList={props.planetList} allplanetweather={props.allplanetweather} day={props.day} limit="max"/> 
+              <TemperatureMaxMin currentplanet={props.currentPlanet} planetList={props.planetList} allplanetweather={props.allplanetweather} day={props.day} limit="min"/>
             </div>
           </div>
       </div>

@@ -5,7 +5,30 @@ import { MiniTitle } from '../elements/minititle';
 
 export function UpcomingWeek(props) {
   var rows = []; 
-  var day = "Wednesday";
+  
+  if (Date.getDay() == 0){
+    var day  = "Monday";
+  }
+  else if (Date.getDay() == 1){
+    var day  = "Tuesday";
+  }
+  else if (Date.getDay() == 2){
+    var day  = "Wednesday";
+  }
+  else if (Date.getDay() == 3){
+    var day  = "Thursday";
+  }
+  else if (Date.getDay() == 4){
+    var day  = "Friday";
+  }
+  else if (Date.getDay() == 5){
+    var day  = "Saturday";
+  }
+  else if (Date.getDay() == 6){
+    var day  = "Sunday";
+  }
+  
+  
   for (let index = 0; index < 6; index++) {
     if (day == "Monday"){
       day = "Tuesday";
@@ -28,7 +51,7 @@ export function UpcomingWeek(props) {
     else {
       day = "Monday";
     }
-    rows.push(<WeekdayDisplay currentPlanet={props.currentPlanet} planetList={props.planetList} day={day}/>)
+    rows.push(<WeekdayDisplay currentPlanet={props.currentPlanet} allplanetweather={props.allplanetweather} planetList={props.planetList} day={day}/>)
   }  
     return (
       <div className='upcomingWeekClass'>
