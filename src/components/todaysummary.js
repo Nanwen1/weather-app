@@ -1,6 +1,5 @@
 import React from 'react';
 import { City } from '../elements/city';
-import { Link } from '../elements/link';
 import { TemperatureCurrent } from '../elements/tempcurrent';
 
 export function TodaySummary(props) {
@@ -17,7 +16,6 @@ export function TodaySummary(props) {
            && <p>
           "#stillAPlanet"
       </p>}
-          <Link location="Change" currentPage={props.currentPage}/>
           <TemperatureCurrent currentplanet={props.currentPlanet} planetList={props.planetList} allplanetweather={props.allplanetweather} currenthour={currenthour}/>
       </div>
     )

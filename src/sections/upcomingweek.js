@@ -6,29 +6,35 @@ import { MiniTitle } from '../elements/minititle';
 export function UpcomingWeek(props) {
   var rows = []; 
   var d = new Date();
+  var day = null;
+
+  if (day == null){
+    if (d.getDay() == 1){
+      day  = "Monday";
+    }
+    else if (d.getDay() == 2){
+      day  = "Tuesday";
+    }
+    else if (d.getDay() == 3){
+      day  = "Wednesday";
+    }
+    else if (d.getDay() == 4){
+      day  = "Thursday";
+    }
+    else if (d.getDay() == 5){
+      var day  = "Friday";
+    }
+    else if (d.getDay() == 6){
+      day  = "Saturday";
+    }
+    else if (d.getDay() == 0){
+      day  = "Sunday";
+    }
+  }
   
-  if (d.getDay() == 1){
-    var day  = "Monday";
-  }
-  else if (d.getDay() == 2){
-    var day  = "Tuesday";
-  }
-  else if (d.getDay() == 3){
-    var day  = "Wednesday";
-  }
-  else if (d.getDay() == 4){
-    var day  = "Thursday";
-  }
-  else if (d.getDay() == 5){
-    var day  = "Friday";
-  }
-  else if (d.getDay() == 6){
-    var day  = "Saturday";
-  }
-  else if (d.getDay() == 0){
-    var day  = "Sunday";
-  }
-  
+  const today = day;
+ 
+  const [whichDayDetail, setwhichDayDetail] = React.useState(today); 
   
   for (let index = 0; index < 6; index++) {
     if (day == "Monday"){
@@ -52,12 +58,17 @@ export function UpcomingWeek(props) {
     else {
       day = "Monday";
     }
-    rows.push(<WeekdayDisplay currentPlanet={props.currentPlanet} allplanetweather={props.allplanetweather} planetList={props.planetList} day={day}/>)
+    rows.push(<WeekdayDisplay currentPlanet={props.currentPlanet} allplanetweather={props.allplanetweather} planetList={props.planetList} day={day}  whichDayDetail={whichDayDetail} setwhichDayDetail={setwhichDayDetail}/>)
   }  
+
     return (
       <div className='upcomingWeekClass'>
+        <MiniTitle location="Today:"/>
+        <WeekdayDisplay currentPlanet={props.currentPlanet} allplanetweather={props.allplanetweather} day={today} whichDayDetail={whichDayDetail} setwhichDayDetail={setwhichDayDetail}/>
         <MiniTitle location="Upcoming:"/>
-        {rows}
+        <div>
+          {rows}
+        </div>
       </div>
     )
   }

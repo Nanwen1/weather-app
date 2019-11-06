@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from '../elements/link';
+import { Link } from 'react-router-dom';
 
 
 export function Godprofile(props) {
+
     return (
         <div className="hourDisplayClass">
-          <Link location="I regret this take me back" currentPage={currentPage}/>
+          <Link to="/weather" className="linkClass">I regret this take me back</Link>
             picture
             decription
         </div>

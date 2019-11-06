@@ -34,10 +34,8 @@ export function TodayBanner(props) {
     return (
 
       <div className='todayBannerClass'>
-        <TodaySummary currentPlanet={props.currentPlanet} planetList={props.planetList} allplanetweather={props.allplanetweather}/>
+        <TodaySummary currentPlanet={props.currentPlanet} planetList={props.planetList} allplanetweather={props.allplanetweather} />
         <Scroller currentPlanet={props.currentPlanet} planetList={props.planetList} setCurrentPlanet={props.setCurrentPlanet}/>
-        <MiniTitle location="Today:"/>
-        <WeekdayDisplay currentPlanet={props.currentPlanet} allplanetweather={props.allplanetweather} day={day}/>
       </div>
     )
   }

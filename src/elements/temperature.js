@@ -39,7 +39,6 @@ import React from 'react';
                      {allplanetweatherindex.weather.map(function(weatherForPlanetIndex) {
                           const isWeatherOnCurrentDay = weatherForPlanetIndex.day === day;
                           const isHourOntheRightHour = weatherForPlanetIndex.time === hour;
-                          console.log(weatherForPlanetIndex.day);
                             if (isWeatherOnCurrentDay && isHourOntheRightHour) {
                               return(
                                 <p className="temperatureClass">

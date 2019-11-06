@@ -2,15 +2,16 @@ import React from 'react';
 
 export function Link(props) {
   const location = props.location;
-  const currentpage  = props.currentPage;
+  const currentPage  = props.currentPage;
 
   function handleClick(event) {
-    event.preventDefault()
-    if (currentpage === 'UpcomingWeek'){
+
+    if (currentPage === 'UpcomingWeek'){
       props.setCurrentPage('Complain')
     } else {
       props.setCurrentPage('UpcomingWeek')
     }
+    event.preventDefault()
   }
 
     return (
