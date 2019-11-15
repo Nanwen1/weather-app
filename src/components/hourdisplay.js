@@ -8,7 +8,7 @@ export function HourDisplay(props) {
     return (
         <div className="hourDisplayClass">
             <Hour hour={props.hour}/>
-            <Temperature currentplanet={props.currentPlanet} planetList={props.planetList} allplanetweather={props.allplanetweather} hour={props.hour}/>
+            <Temperature currentplanet={props.currentPlanet} planetList={props.planetList} allplanetweather={props.allplanetweather} hour={props.hour} day={props.day}/>
         </div>
     )
   }

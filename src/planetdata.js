@@ -9,11 +9,15 @@ import saturn from './planets/saturn.jpg';
 import venus from './planets/Venus.jpg';
 import uranus from './planets/uranus.jpg';
 
-function getseedforhour(high, low, hour, day){
-  const generator = gen(hour + day);
-
+function getfirsttemp(high, low, hour){
+  const generator = gen(hour);
   return generator(high-low)+low;
 }
+
+// function getseedforhour(movingtemperature){
+//     const generator = gen(movingtemperature);
+//     return generator(movingtemperature-low)+low;
+//   }
 
 const planethighsandlows = [
     {name: 'Mercury', high: 449, low:-180},
@@ -35,12 +39,23 @@ export const allplanetweather = planethighsandlows.map(function(planetlistindex)
 function generatetempdata(dictionary){
     const low = dictionary.low;
     const high = dictionary.high;
-    const outputweatherdata = []
+    var d = new Date();
+    var hour = d.hour;
+    var x;
+    var movingtemperature = getfirsttemp(high, low, hour);
+    const outputweatherdata = [];
     const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     for (let day = 0; day < days.length; day++) {
         const dayname = days[day];
         for (let hour = 0; hour < 12; hour++) {
-            outputweatherdata.push({day: dayname, time: hour*2, temp:getseedforhour(high, low, hour, dayname)})
+            outputweatherdata.push({day: dayname, time: hour*2, temp: movingtemperature})
+            if(Math.random() > 0.5){
+                x = 1 * Math.random() * 0.1
+                console.log(x)
+            } else {
+                x = -1 * Math.random() * 0.1
+            }
+            movingtemperature =  Math.round(x*movingtemperature+ movingtemperature);
         }
     }
     return outputweatherdata;

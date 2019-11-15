@@ -13,12 +13,17 @@ import React from 'react';
         {allplanetweather.map(function(allplanetweatherindex) {
           const currentplanetbooleancheck = allplanetweatherindex.name === currentplanet 
           if (currentplanetbooleancheck){
-            
-            var max = allplanetweatherindex.weather[0].temp;
-            var min = allplanetweatherindex.weather[0].temp;
-            
+            var max;
+            var min;  
+            var done = false;
             allplanetweatherindex.weather.map(function(weatherForPlanetIndex) {
+            
               const isWeatherOnCurrentDay = weatherForPlanetIndex.day === day;
+              if (isWeatherOnCurrentDay && done === false ) { 
+                max = weatherForPlanetIndex.temp;
+                min = weatherForPlanetIndex.temp;
+                done = true;
+              }
 
               if (isWeatherOnCurrentDay) { 
                   if (max<weatherForPlanetIndex.temp) {
