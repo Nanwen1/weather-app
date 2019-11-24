@@ -1,10 +1,16 @@
 import React from 'react';
 
 export function Field(props) {
-    const planetname = props.planet;
+    
+    const { name, type } = props
+
+    if (type === 'textarea') {
+      return (
+        <textarea className="entryFieldClass" name={name}></textarea>
+      )
+    }
+
     return (
-      <h1 className="entryFieldClass">
-          form entry field
-      </h1>
+      <input className="entryFieldClass" type={type} name={name} />
     )
   }

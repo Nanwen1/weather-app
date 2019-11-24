@@ -2,8 +2,6 @@ import React from 'react';
 
 export function Button() {
     return (
-      <h1>
-       Submit
-      </h1>
+      <button type="submit" className="submit">Submit</button>
     )
   }

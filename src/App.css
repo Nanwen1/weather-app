@@ -146,3 +146,29 @@
   margin-left : 10px;
   font-weight: bold;
 }
+
+form {
+  padding: 0 10px;
+}
+
+.entryFieldClass {
+  display: block;
+  margin-left: 10px;
+  margin-top: 4px;
+  background-color: transparent !important;
+  border: 1px solid grey;
+  border-radius: 3px;
+  width: 89%;
+  color: white;
+  padding: 5px 9px;
+  font-size: 30px;
+  font-family: 'Sarpanch', sans-serif;
+}
+
+.submit {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-family: 'Sarpanch', sans-serif;
+  font-size: 20px;
+  padding: 5px 30px;
+}
