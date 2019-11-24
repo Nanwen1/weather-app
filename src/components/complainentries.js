@@ -18,21 +18,25 @@ export function ComplainForm(props) {
     const [complaint, setComplaint] = React.useState('')
 
 
-    const handleSubmit = e => {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...this.state })
-      })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
-
+    const handleSubmit = async e => {
       e.preventDefault();
+  
+      try {
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "complaint-form", name, email, complaint })
+        })
+        
+        alert("Success!")
+      } catch (error) {
+        alert(error)
+      }
     };
 
     return (
         <div className="hourDisplayClass">
-          <form name="complaint-form" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
             <div>
               <MiniTitle location="Your name"/>
               <Field name="name" type="text" set={setName} value={name} />
