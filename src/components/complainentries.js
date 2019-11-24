@@ -47,7 +47,7 @@ export function ComplainForm(props) {
             </div>
             <div>
               <MiniTitle location="Complaint" />
-              <Field name="complain" type="textarea" set={setComplaint} value={complaint} />
+              <Field name="complaint" type="textarea" set={setComplaint} value={complaint} />
             </div>
             <Button/>
           </form>
