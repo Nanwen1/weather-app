@@ -29,6 +29,11 @@ export function ComplainForm(props) {
         })
         
         alert("Success!")
+        
+        setName('')
+        setEmail('')
+        setComplaint('')
+
       } catch (error) {
         alert(error)
       }
